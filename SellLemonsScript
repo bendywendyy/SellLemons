@@ -1,6 +1,6 @@
 local CalmLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/IcantAffordSynapse/calmlib/refs/heads/main/src.lua"))()
 
-local window = CalmLib:win("sub 2 vaehz")
+local window = CalmLib:win("Bendyyyy")
 local section1 = window:tab("Autofarm", "rbxassetid://109121102062195")
 local section2 = window:tab("Settings", "rbxassetid://99579688577014")
 
