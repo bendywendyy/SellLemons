@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXM Tweaks</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-text">EXM<br><small>TWEAKS</small></span>
+      </div>
+
+      <div class="game-mode">
+        <span class="game-mode-icon">&#9888;</span>
+        <span>EXM Game Mode</span>
+      </div>
+
+      <nav class="nav">
+        <div class="nav-group">
+          <span class="nav-label">General</span>
+          <a href="#" class="nav-item active" data-page="home">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home
+          </a>
+          <a href="#" class="nav-item" data-page="backups">
+            <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Backups
+          </a>
+          <a href="#" class="nav-item" data-page="fixes">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Fixes
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <span class="nav-label">Main</span>
+          <a href="#" class="nav-item" data-page="general">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            General
+          </a>
+          <a href="#" class="nav-item" data-page="hardware">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            Hardware
+          </a>
+          <a href="#" class="nav-item" data-page="debloat">
+            <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+            Debloat
+            <span class="badge">&#10024;</span>
+          </a>
+          <a href="#" class="nav-item" data-page="network">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+            Network
+            <span class="badge">&#10024;</span>
+          </a>
+          <a href="#" class="nav-item" data-page="advanced">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M22 12h-2M19.07 19.07l-1.41-1.41M12 22v-2M4.93 19.07l1.41-1.41M2 12h2M4.93 4.93l1.41 1.41M12 2v2"/></svg>
+            Advanced
+            <span class="badge">&#10024;</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="profile">
+        <div class="avatar">I</div>
+        <div class="profile-info">
+          <span class="username">isaiahscott898</span>
+          <span class="plan">Free User</span>
+        </div>
+        <button class="profile-arrow">&#8964;</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Home Page -->
+      <div class="page active" id="page-home">
+        <div class="share-bar">
+          <span>&#128172; Share your experience with EXM</span>
+          <span class="share-arrow">&#8250;</span>
+        </div>
+
+        <div class="page-header">
+          <div>
+            <h1>Welcome Back, isaiahscott898!</h1>
+            <p>Ready to enhance your system performance?</p>
+          </div>
+          <button class="btn-premium">&#10024; Upgrade to Premium</button>
+        </div>
+
+        <div class="cards-row">
+          <div class="card card-backup">
+            <div class="card-top">
+              <span class="card-icon">&#9211;</span>
+              <button class="btn-outline">Create backup &#8250;</button>
+            </div>
+            <div class="card-stat">1</div>
+            <div class="card-label">Backup found</div>
+          </div>
+
+          <div class="card card-help">
+            <div class="card-top">
+              <span class="card-icon discord">&#128172;</span>
+              <button class="btn-outline-green">I need help &#8250;</button>
+            </div>
+            <h3>Need help?</h3>
+            <p>Join our dedicated support server</p>
+          </div>
+
+          <div class="card card-tutorial">
+            <div class="card-top">
+              <span class="card-icon">&#9654;</span>
+              <button class="btn-outline-red">Watch Tutorial &#8250;</button>
+            </div>
+            <h3>How to use Guide</h3>
+            <p>Watch our Full tutorial video for EXM</p>
+          </div>
+        </div>
+
+        <div class="monitor-row">
+          <div class="card monitor-card">
+            <div class="monitor-header">
+              <span class="cpu-label">Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz</span>
+              <div class="monitor-tabs">
+                <button class="tab-btn active" data-chart="cpu">CPU</button>
+                <button class="tab-btn" data-chart="gpu">GPU</button>
+                <button class="tab-btn" data-chart="ram">RAM</button>
+              </div>
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="perfChart"></canvas>
+            </div>
+            <div class="chart-labels">
+              <span>60 seconds</span>
+              <span>45 seconds</span>
+              <span>30 seconds</span>
+              <span>15 seconds</span>
+              <span>0 seconds</span>
+            </div>
+          </div>
+
+          <div class="card quickstart-card">
+            <h3>&#9889; Quickstart</h3>
+            <ul class="quickstart-list">
+              <li class="done">
+                <span class="qs-check done">&#10003;</span>
+                <div>
+                  <strong>Create a backup</strong>
+                  <p>Back up your system settings for safety</p>
+                </div>
+              </li>
+              <li class="done">
+                <span class="qs-check done">&#10003;</span>
+                <div>
+                  <strong>Apply a tweak</strong>
+                  <p>Enable tweaks to boost performance</p>
+                </div>
+              </li>
+              <li>
+                <span class="qs-check pending">&#9675;</span>
+                <div>
+                  <strong>Clean your system files</strong>
+                  <p>Free up the clutter on your drive</p>
+                </div>
+              </li>
+              <li>
+                <span class="qs-check pending">&#9675;</span>
+                <div>
+                  <strong>Debloat your system</strong>
+                  <p>Apply a service preset to remove useless services</p>
+                </div>
+              </li>
+              <li class="done">
+                <span class="qs-check done">&#10003;</span>
+                <div>
+                  <strong>Optimize an app</strong>
+                  <p>Debloat and optimize any application</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="updates-section">
+          <div class="updates-header">
+            <h3>&#128226; Updates</h3>
+            <span class="version-badge">EXM Version 2.1.1</span>
+          </div>
+          <div class="updates-grid">
+            <div class="update-card" style="background-image: url('https://picsum.photos/seed/city/400/200')">
+              <div class="update-overlay"></div>
+            </div>
+            <div class="update-card" style="background-image: url('https://picsum.photos/seed/forest/400/200')">
+              <div class="update-overlay"></div>
+            </div>
+            <div class="update-card" style="background-image: url('https://picsum.photos/seed/moon/400/200')">
+              <div class="update-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backups Page -->
+      <div class="page" id="page-backups">
+        <div class="page-header">
+          <h1>Backups</h1>
+          <button class="btn-premium">&#43; Create Backup</button>
+        </div>
+        <div class="card" style="padding:24px">
+          <div class="backup-item">
+            <span class="backup-icon">&#128190;</span>
+            <div>
+              <strong>System Backup #1</strong>
+              <p>Created on 06/20/2026 — 42 tweaks saved</p>
+            </div>
+            <div class="backup-actions">
+              <button class="btn-sm">Restore</button>
+              <button class="btn-sm btn-danger">Delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="empty-hint">Create backups before applying tweaks to keep your system safe.</div>
+      </div>
+
+      <!-- Fixes Page -->
+      <div class="page" id="page-fixes">
+        <div class="page-header"><h1>Fixes</h1></div>
+        <div class="tweaks-grid">
+          <div class="tweak-card">
+            <h4>Fix Windows Update</h4>
+            <p>Reset and repair Windows Update components</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+          <div class="tweak-card">
+            <h4>Repair System Files</h4>
+            <p>Run SFC and DISM to repair corrupted files</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+          <div class="tweak-card">
+            <h4>Fix Network Stack</h4>
+            <p>Reset TCP/IP stack and Winsock catalog</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+          <div class="tweak-card">
+            <h4>Reset DNS Cache</h4>
+            <p>Clear and reset the DNS resolver cache</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- General Page -->
+      <div class="page" id="page-general">
+        <div class="page-header"><h1>General Tweaks</h1></div>
+        <div class="tweaks-grid">
+          <div class="tweak-card">
+            <h4>Disable Telemetry</h4>
+            <p>Stop Microsoft data collection services</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Cortana</h4>
+            <p>Remove the Cortana virtual assistant</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Classic Context Menu</h4>
+            <p>Restore the old Windows 10 right-click menu</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Superfetch</h4>
+            <p>Turn off SysMain for better SSD performance</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Search Indexing</h4>
+            <p>Stop background disk indexing</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Action Center</h4>
+            <p>Hide the Windows notification panel</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hardware Page -->
+      <div class="page" id="page-hardware">
+        <div class="page-header"><h1>Hardware Tweaks</h1></div>
+        <div class="tweaks-grid">
+          <div class="tweak-card">
+            <h4>High Performance Power Plan</h4>
+            <p>Switch to maximum power plan for best performance</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable CPU Throttling</h4>
+            <p>Prevent the OS from throttling your processor</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Enable MSI Mode</h4>
+            <p>Enable Message Signaled Interrupts for GPU</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable HPET</h4>
+            <p>Turn off High Precision Event Timer</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Optimize GPU Settings</h4>
+            <p>Apply recommended NVIDIA/AMD registry tweaks</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+          <div class="tweak-card">
+            <h4>Set Timer Resolution</h4>
+            <p>Set system timer to 0.5ms for lower latency</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Debloat Page -->
+      <div class="page" id="page-debloat">
+        <div class="page-header"><h1>Debloat</h1></div>
+        <div class="card" style="padding:20px;margin-bottom:16px">
+          <p style="color:#a0a0b0;margin-bottom:16px">Select a preset to remove unnecessary Windows components and services.</p>
+          <div class="preset-grid">
+            <button class="preset-btn active">Minimal</button>
+            <button class="preset-btn">Balanced</button>
+            <button class="preset-btn">Aggressive</button>
+          </div>
+        </div>
+        <div class="tweaks-grid">
+          <div class="tweak-card">
+            <h4>Remove Xbox Apps</h4>
+            <p>Uninstall Xbox Game Bar and related apps</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Remove OneDrive</h4>
+            <p>Completely uninstall Microsoft OneDrive</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Remove Edge Browser</h4>
+            <p>Uninstall Microsoft Edge (keeps WebView2)</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Remove Bloatware Apps</h4>
+            <p>Remove pre-installed Store apps and games</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Network Page -->
+      <div class="page" id="page-network">
+        <div class="page-header"><h1>Network Tweaks</h1></div>
+        <div class="tweaks-grid">
+          <div class="tweak-card">
+            <h4>Disable Nagle's Algorithm</h4>
+            <p>Reduce latency for gaming and real-time apps</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Optimize DNS Settings</h4>
+            <p>Switch to fast public DNS (1.1.1.1 / 8.8.8.8)</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Network Throttling</h4>
+            <p>Remove multimedia class scheduler limits</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Increase Socket Buffer</h4>
+            <p>Enlarge TCP/UDP receive buffers</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Auto-Tuning</h4>
+            <p>Fix compatibility issues with some routers</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Enable RSS</h4>
+            <p>Receive Side Scaling across CPU cores</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advanced Page -->
+      <div class="page" id="page-advanced">
+        <div class="page-header"><h1>Advanced Tweaks</h1></div>
+        <div class="warning-banner">
+          &#9888; These tweaks are for advanced users. Always create a backup before applying.
+        </div>
+        <div class="tweaks-grid">
+          <div class="tweak-card">
+            <h4>Disable Spectre/Meltdown Mitigations</h4>
+            <p>Remove CPU vulnerability patches for performance (risk)</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Windows Defender</h4>
+            <p>Turn off real-time protection completely</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Optimize NTFS</h4>
+            <p>Disable 8.3 names and last access timestamps</p>
+            <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>Disable Paging Executive</h4>
+            <p>Keep kernel and drivers in RAM at all times</p>
+            <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+          </div>
+          <div class="tweak-card">
+            <h4>BCDEDIT Tweaks</h4>
+            <p>Apply bootloader optimizations for lower latency</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+          <div class="tweak-card">
+            <h4>Interrupt Affinity</h4>
+            <p>Pin GPU interrupts to a specific CPU core</p>
+            <button class="btn-apply">Apply</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
